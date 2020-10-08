@@ -2,11 +2,16 @@ const routes = require('express').Router();
 const SessionController = require('./app/controllers/SessionController');
 const authMiddleware = require('./app/middlewares/auth');
 
+// Rotas Authentication -- Login and change password
 routes.post('/sessions', SessionController.store);
+routes.post('/sessions/change-password', SessionController.changePassword);
+routes.post('/sessions/change-password/confirm', authMiddleware, SessionController.confirmChangePassword);
 
-routes.use(authMiddleware);
+// Rotas Register -- Register
 
-routes.get('/dashboard', (req, res) => {
+//Private Routes -- General
+
+routes.get('/dashboard', authMiddleware, (req, res) => {
     res.status(200).send({});
 })
 

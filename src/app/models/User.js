@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.VIRTUAL,
-        password_hash: DataTypes.STRING
+        password_hash: DataTypes.STRING,
+        temp_pass_hash: DataTypes.STRING
     },
     {
         hooks: {
