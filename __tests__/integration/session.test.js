@@ -46,5 +46,27 @@ describe('Authentication', () => {
         });
 
         expect(response.body).toHaveProperty('token');
-    })
+    });
+
+    it('should not to access private routes without jwt', async () => {
+        const response = await request(app).get('/dashboard');
+        
+        expect(response.status).toBe(401);
+    });
+
+    it('should not access routes with invalid token', async () => {
+        const response = await request(app).get('/dashboard')
+        .set('Authorization', 'Bearer 123123');
+        
+        expect(response.status).toBe(401);
+    });
+
+    it('should access routes with valid token', async () => {
+        const user = await factory.create('User', {});
+
+        const response = await request(app).get('/dashboard')
+        .set('Authorization', `Bearer ${user.generateToken()}`);
+        
+        expect(response.status).toBe(200);
+    });
 })
