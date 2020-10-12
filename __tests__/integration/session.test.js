@@ -199,3 +199,15 @@ describe('Password', () => {
 
 
 })
+
+describe('Register', () => {
+    it('should receive name, email and password and register new account', () => {
+        const response = await request(app).post('/register/add').send({
+            name: 'Glauber de Souza Silva',
+            email: 'glauber.edif@gmail.com',
+            password: '12345678'
+        });
+
+        expect(response.status).toBe(200);
+    });
+});
