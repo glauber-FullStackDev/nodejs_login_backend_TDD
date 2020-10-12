@@ -47,9 +47,9 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ yarn install
+    $ git clone https://github.com/glauber-FullStackDev/nodejs_login_backend_TDD.git
+    $ cd nodejs_login_backend_TDD
+    $ npm install
 
 ## Configure app
 
