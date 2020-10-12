@@ -2,6 +2,12 @@
     <img style="width: 200px;" src="./logo.png" alt="">
 </div>
 
+<style>
+    a img {
+        width: 200px;
+    }
+</style>
+
 # NodeJs Authenticate Back-end
 
 NodeJS authenticate backend TDD with express + Sequelize + JEST.
