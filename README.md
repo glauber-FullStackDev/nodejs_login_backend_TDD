@@ -61,6 +61,10 @@ Open `.env` file then edit  the credentials of the local database or the server 
 `DB_NAME`=YOUR_DB_NAME<br>
 `APP_SECRET`=YOUR_SECRET_WORD_TO_JWT<br>
 
+## Running the project tests
+
+    $ npm test
+
 ## Running the project
 
     $ npm start
