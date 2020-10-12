@@ -10,6 +10,8 @@ NodeJS authenticate backend TDD with express + Sequelize + JEST.
 
 Authentication is done through a JWT token, providing greater security and providing a way to encrypt data so that user identification and the passage of sensitive data is simpler.
 
+All tests are centralized in the `__tests__` folder. The framework used to implement the tests was JEST. The development was based on the TDD method, thus helping to have clean code and automated tests since its conception.
+
 ---
 ## Requirements
 
