@@ -1,12 +1,6 @@
 <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
-    <img style="width: 200px;" src="./logo.png" alt="">
+    <img width="200px" src="./logo.png" alt="">
 </div>
-
-<style>
-    a img {
-        width: 200px;
-    }
-</style>
 
 # NodeJs Authenticate Back-end
 
