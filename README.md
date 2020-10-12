@@ -133,4 +133,79 @@ Content-Length: xy
     "code": 401,
     "message": "Incorrect password."
 }
+```
+
+## Change Password
+**You send:**  Your email credential.<br>
+**You get:** Message success.
+
+**Request:**
+```json
+POST /sessions/change-password HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "foo@foo.com",
+}
+```
+**Successful Response:**
+```json
+HTTP/1.1 200 OK
+Server: My RESTful API
+Content-Type: application/json
+
+{
+   "message": "sended email"
+}
+```
+**Failed Response:**
+```json
+HTTP/1.1 400 Unauthorized
+Server: My RESTful API
+Content-Type: application/json
+Content-Length: xy
+
+{
+    "code": 400,
+    "message": "User not found"
+}
+``` 
+
+## Confirm change Password
+**You send:**  Your email credential.<br>
+**You get:** Message success.
+
+**Request:**
+```json
+POST /sessions/change-password/confirm HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "code": "aa144s14",
+    "password": "12345678"
+}
+```
+**Successful Response:**
+```json
+HTTP/1.1 200 OK
+Server: My RESTful API
+Content-Type: application/json
+
+{
+   "message": "Password Changed"
+}
+```
+**Failed Response:**
+```json
+HTTP/1.1 400 Unauthorized
+Server: My RESTful API
+Content-Type: application/json
+Content-Length: xy
+
+{
+    "code": 400,
+    "message": "Invalid code"
+}
 ``` 
